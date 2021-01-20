@@ -1,6 +1,8 @@
-
+import Toggle from "./core/Toggle"
 function App() {
-  return (<></>)
+  return (<>
+  <Toggle type="button" value="Toggle Button" />
+  </>)
 
 }
 
