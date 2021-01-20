@@ -2,12 +2,14 @@ import React,{useState} from "react";
 import Styled from "styled-components"
 
 const Toggle =(props) =>{
-    const[state,setState] = useState(props);
-    const{type,value} = state;
+    const [state,setState] = useState(props);
+    const {type,value} = state;
+    const [isOn,setOn] = useState(true);
+    const handleChange = () =>setOn(!isOn);
 
     return (<>
-    <StyledButton type={type}>{value}</StyledButton>
-    <span>ON</span>
+    <StyledButton type={type} onClick={handleChange}>{value}</StyledButton>
+    {isOn ? <span>ON</span>:<span>OFF</span>}
     </>)
 }
 
