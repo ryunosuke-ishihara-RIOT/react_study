@@ -4,8 +4,8 @@ import styled from "styled-components";
 const Toggle = (props) => {
   const [state, setState] = useState(props);
   const { type, value } = state;
-  const [isOn, setIsetOn] = useState(true);
-  const handleChange = () => setIsetOn(!isOn);
+  const [isOn, setIsOn] = useState(true);
+  const handleChange = () => setIsOn(!isOn);
   return (
     <>
       <StyledButton type={type} onClick={handleChange}>
