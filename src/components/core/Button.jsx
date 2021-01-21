@@ -4,11 +4,11 @@ import styled, { css } from "styled-components";
 const Button = (props) => {
   const [state, setState] = useState(props);
   const { value, isDisabled } = state;
-  const handelAlert = () => window.alert("木村うんこ");
+  const handleAlert = () => window.alert("木村うんこ");
 
   return (
     <>
-      <StyledButton isDisabled={isDisabled} onClick={handelAlert}>
+      <StyledButton isDisabled={isDisabled} onClick={handleAlert}>
         {value}
       </StyledButton>
     </>

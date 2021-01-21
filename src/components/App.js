@@ -3,8 +3,8 @@ import Button from "./core/Button"
 
 function App() {
   return (<>
-    <Toggle type="button" value="Toggle Button" />
-    <Button type="button" value="alert" isDisable={true}/>
+    {/* <Toggle type="button" value="Toggle Button" /> */}
+    <Button value="alert" isDisabled={true}/>
   </>)
 
 }
