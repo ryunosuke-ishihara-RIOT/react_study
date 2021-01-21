@@ -8,7 +8,7 @@ const Toggle = (props) => {
   const handleChange = () => setIsOn(!isOn);
   return (
     <>
-      <StyledButton type={type} onClick={handleChange}>
+      <StyledButton onClick={handleChange}>
         {value}
       </StyledButton>
       {isOn ? <span>ON</span> : <span>OFF</span>}
