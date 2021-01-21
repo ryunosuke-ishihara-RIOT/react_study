@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 const Button = (props) => {
   const [state, setState] = useState(props);
   const { value, isDisabled } = state;
-  const handleAlert = () => window.alert("木村うんこ");
+  const handleAlert = () => window.alert("あああ");
 
   return (
     <>
