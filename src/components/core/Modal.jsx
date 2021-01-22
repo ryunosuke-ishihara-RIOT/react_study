@@ -9,9 +9,7 @@ const Modal = (props) => {
   return (
     <>
       <button onClick={handleSwitch}>{value}</button>
-      {isSwitched ? (
-        isSwitched
-      ) : (
+      {isSwitched && (
         <StyledContainer>
           <StyledItem>
             <p>{text}</p>
