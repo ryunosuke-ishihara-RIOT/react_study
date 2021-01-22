@@ -6,7 +6,7 @@ function App() {
   return (<>
     {/* <Toggle type="button" value="Toggle Button" /> */}
     {/* <Button value="alert" isDisabled={true}/> */}
-    <Modal value="push" text="うんこ"/>
+    <Modal value="push" text="モーダル"/>
   </>)
 
 }

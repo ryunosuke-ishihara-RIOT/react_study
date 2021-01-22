@@ -14,7 +14,7 @@ const Modal =(props)=>{
       ) : (
         <StyledDiv1>
           <StyledDiv2>
-            <p>モーダル</p>
+            <p>{text}</p>
             <button onClick={handleClose}>close</button>
           </StyledDiv2>
         </StyledDiv1>
