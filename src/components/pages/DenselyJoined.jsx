@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import TextInput from "../core/TextInput";
 import CheckBox from "../core/CheckBox";
+import TextInput from "../core/TextInput";
 import Toggle from "../core/Toggle";
 
 const DenselyJoined = ({ value, text }) => {
