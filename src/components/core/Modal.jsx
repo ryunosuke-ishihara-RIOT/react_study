@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-const Modal = (props) => {
-  const [state, setState] = useState(props);
-  const { value, text } = state;
+const Modal = ({ value, text }) => {
   const [isSwitched, setIsSwitched] = useState(true);
   const handleSwitch = () => setIsSwitched(!isSwitched);
   return (

@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 
-const Button = (props) => {
-  const [state, setState] = useState(props);
-  const { value, isDisabled } = state;
+const Button = ({ value, isDisabled }) => {
   const handleAlert = () => window.alert("あああ");
 
   return (

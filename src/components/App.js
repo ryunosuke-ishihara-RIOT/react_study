@@ -1,13 +1,15 @@
 import Button from "./core/Button";
 import Modal from "./core/Modal";
 import Toggle from "./core/Toggle";
+import DenselyJoined from "./pages/DenselyJoined";
 
 function App() {
   return (
     <>
       {/* <Toggle type="button" value="Toggle Button" /> */}
       {/* <Button value="alert" isDisabled={true}/> */}
-      <Modal value="push" text="モーダル" />
+      {/* <Modal value="push" text="モーダル" /> */}
+      <DenselyJoined value="push" text="モーダル" />
     </>
   );
 }
