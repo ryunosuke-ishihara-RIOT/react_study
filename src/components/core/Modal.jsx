@@ -13,18 +13,18 @@ const Modal = (props) => {
       {isOn ? (
         isOn
       ) : (
-        <StyledDiv1>
-          <StyledDiv2>
+        <StyledContainer>
+          <StyledItem>
             <p>{text}</p>
             <button onClick={handleClose}>close</button>
-          </StyledDiv2>
-        </StyledDiv1>
+          </StyledItem>
+        </StyledContainer>
       )}
     </>
   );
 };
 
-const StyledDiv1 = styled.div`
+const StyledContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -35,7 +35,7 @@ const StyledDiv1 = styled.div`
   align-items: center;
   justify-content: center;
 `;
-const StyledDiv2 = styled.div`
+const StyledItem = styled.div`
   width: 50%;
   padding: 5em;
   background-color: white;
