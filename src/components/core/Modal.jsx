@@ -4,15 +4,22 @@ import styled,{css} from "styled-components";
 const Modal =(props)=>{
     const [state,setState] = useState(props);
     const {value,text} = state;
-
+    const [isOn,setIsOn] = useState(true);
+    const handleOpen = ()=> setIsOn(false);
+    const handleClose = () => setIsOn(true);
     return <>
-    <button>{value}</button>
-    <StyledDiv1>
-        <StyledDiv2>
-            <p>{text}</p>
-            <button>close</button>
-        </StyledDiv2>
-    </StyledDiv1>
+    <button onClick={handleOpen}>{value}</button>
+    {isOn ? (
+        isOn
+      ) : (
+        <StyledDiv1>
+          <StyledDiv2>
+            <p>モーダル</p>
+            <button onClick={handleClose}>close</button>
+          </StyledDiv2>
+        </StyledDiv1>
+      )}
+
     </>
 }
 
