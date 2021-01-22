@@ -1,6 +1,6 @@
-import Toggle from "./core/Toggle";
 import Button from "./core/Button";
 import Modal from "./core/Modal";
+import Toggle from "./core/Toggle";
 
 function App() {
   return (

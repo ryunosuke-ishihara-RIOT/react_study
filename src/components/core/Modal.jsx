@@ -4,19 +4,18 @@ import styled, { css } from "styled-components";
 const Modal = (props) => {
   const [state, setState] = useState(props);
   const { value, text } = state;
-  const [isOn, setIsOn] = useState(true);
-  const handleOpen = () => setIsOn(false);
-  const handleClose = () => setIsOn(true);
+  const [isSwitched, setIsSwitched] = useState(true);
+  const handleSwitch = () => setIsSwitched(!isSwitched);
   return (
     <>
-      <button onClick={handleOpen}>{value}</button>
-      {isOn ? (
-        isOn
+      <button onClick={handleSwitch}>{value}</button>
+      {isSwitched ? (
+        isSwitched
       ) : (
         <StyledContainer>
           <StyledItem>
             <p>{text}</p>
-            <button onClick={handleClose}>close</button>
+            <button onClick={handleSwitch}>close</button>
           </StyledItem>
         </StyledContainer>
       )}
