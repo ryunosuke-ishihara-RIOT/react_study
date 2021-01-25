@@ -6,12 +6,10 @@ import Toggle from "../core/Toggle";
 
 const DenselyJoined = ({ value, text }) => {
   const [isSwitched, setIsSwitched] = useState(true);
-  const handleOpen = () => setIsSwitched(false);
-  const handleClose = () => setIsSwitched(true);
 
   return (
     <>
-      <button onClick={handleOpen}>{value}</button>
+      <button onClick={() => setIsSwitched(!isSwitched)}>{value}</button>
       {isSwitched ? (
         isSwitched
       ) : (
@@ -25,7 +23,9 @@ const DenselyJoined = ({ value, text }) => {
             <Toggle value="Toggle Button" />
             <StyledItem>
               <StyledText>{text}</StyledText>
-              <StyledButton onClick={handleClose}>CLOSE</StyledButton>
+              <StyledButton onClick={() => setIsSwitched(!isSwitched)}>
+                CLOSE
+              </StyledButton>
             </StyledItem>
           </StyledContent>
         </StyledContainer>
@@ -65,10 +65,9 @@ const StyledItem = styled.div`
 `;
 
 const StyledText = styled.p`
-  position: absolute;
-  left: 60px;
   color: red;
-  margin: auto;
+  text-align: center;
+  margin: 0;
 `;
 
 const StyledButton = styled.button`

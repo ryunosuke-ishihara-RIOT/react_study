@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const TextInput = ({ value }) => {
-  const [name, setName] = useState({ name: "" });
-  const handleChange = (e) => setName({ name: e.target.value });
+  const [name, setName] = useState({ value: "" });
 
   return (
     <>
       <StyledContainer>
         <span>{value}：</span>
-        <input value={name.name} onChange={handleChange} />
+        <input
+          value={name.value}
+          onChange={(e) => setName({ value: e.target.value })}
+        />
       </StyledContainer>
-      <Styledspan>私の名前は{name.name}です</Styledspan>
+      <StyledText>私の名前は{name.value}です</StyledText>
     </>
   );
 };
@@ -20,7 +22,7 @@ const StyledContainer = styled.div`
   display: flex;
 `;
 
-const Styledspan = styled.span`
+const StyledText = styled.span`
   margin: auto;
 `;
 

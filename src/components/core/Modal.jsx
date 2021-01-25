@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Modal = ({ value, text }) => {
-  const [isSwitched, setIsSwitched] = useState(true);
-  const handleSwitch = () => setIsSwitched(!isSwitched);
+  const [isSwitched, setIsSwitched] = useState(false);
+
   return (
     <>
-      <button onClick={handleSwitch}>{value}</button>
+      <button onClick={() => setIsSwitched(!isSwitched)}>{value}</button>
       {isSwitched && (
         <StyledContainer>
           <StyledItem>
             <p>{text}</p>
-            <button onClick={handleSwitch}>close</button>
+            <button onClick={() => setIsSwitched(!isSwitched)}>close</button>
           </StyledItem>
         </StyledContainer>
       )}

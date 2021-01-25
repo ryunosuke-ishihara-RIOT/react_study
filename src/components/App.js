@@ -1,7 +1,7 @@
 import Button from "./core/Button";
+import DenselyJoined from "./pages/DenselyJoined";
 import Modal from "./core/Modal";
 import Toggle from "./core/Toggle";
-import DenselyJoined from "./pages/DenselyJoined";
 
 function App() {
   return (

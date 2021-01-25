@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 
 const CheckBox = ({ type, sex, value }) => {
-  const [isSwitch, setIsSwitch] = useState(false);
-  const handleChange = () => setIsSwitch(!isSwitch);
+  const [isSwitched, setIsSwitched] = useState(false);
+
   return (
     <>
-      <input id={sex} type={type} checked={isSwitch} onClick={handleChange} />
+      <input
+        id={sex}
+        type={type}
+        checked={isSwitched}
+        onClick={() => setIsSwitched(!isSwitched)}
+      />
       <label htmlFor={sex}>{value}</label>
     </>
   );

@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Toggle = ({ value }) => {
-  const [isOn, setIsOn] = useState(true);
-  const handleChange = () => setIsOn(!isOn);
+  const [isSwitched, setIsSwitched] = useState(true);
+
   return (
     <>
       <StyledContainer>
-        <StyledButton onClick={handleChange}>{value}</StyledButton>
-        {isOn ? <span>ON</span> : <span>OFF</span>}
+        <StyledButton onClick={() => setIsSwitched(!isSwitched)}>
+          {value}
+        </StyledButton>
+        {(isSwitched && <span>ON</span>) || <span>OFF</span>}
       </StyledContainer>
     </>
   );
