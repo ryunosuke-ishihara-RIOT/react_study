@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CheckBox = ({ type, sex, value }) => {
+export const CheckBox = ({ type, sex, value }) => {
   const [isSwitched, setIsSwitched] = useState(false);
 
   return (
@@ -15,5 +15,3 @@ const CheckBox = ({ type, sex, value }) => {
     </>
   );
 };
-
-export default CheckBox;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const Toggle = ({ value }) => {
+export const Toggle = ({ value }) => {
   const [isSwitched, setIsSwitched] = useState(true);
 
   return (
@@ -24,4 +24,3 @@ const StyledContainer = styled.div`
 const StyledButton = styled.button`
   color: black;
 `;
-export default Toggle;

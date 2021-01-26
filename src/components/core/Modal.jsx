@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const Modal = ({ value, text }) => {
+export const Modal = ({ value, text }) => {
   const [isSwitched, setIsSwitched] = useState(false);
 
   return (
@@ -38,5 +38,3 @@ const StyledItem = styled.div`
   align-items: center;
   justify-content: center;
 `;
-
-export default Modal;

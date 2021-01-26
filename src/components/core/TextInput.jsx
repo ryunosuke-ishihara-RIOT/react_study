@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const TextInput = ({ value }) => {
+export const TextInput = ({ value }) => {
   const [name, setName] = useState({ value: "" });
 
   return (
@@ -25,5 +25,3 @@ const StyledContainer = styled.div`
 const StyledText = styled.span`
   margin: auto;
 `;
-
-export default TextInput;

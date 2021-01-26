@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-const Button = ({ value, isDisabled }) => {
+export const Button = ({ value, isDisabled }) => {
   const handleAlert = () => window.alert("あああ");
 
   return (
@@ -21,5 +21,3 @@ const StyledButton = styled.button`
       pointer-events: none;
     `}
 `;
-
-export default Button;
