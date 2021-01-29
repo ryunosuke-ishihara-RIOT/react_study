@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const CheckBox = ({ type, sex, value }) => {
-  const [isSwitched, setIsSwitched] = useState(false);
-
+export const CheckBox = ({ isChecked, id, changeId, value }) => {
+  console.log(changeId);
   return (
     <>
       <input
-        id={sex}
-        type={type}
-        checked={isSwitched}
-        onClick={() => setIsSwitched(!isSwitched)}
+        type="checkbox"
+        checked={isChecked}
+        onChange={() => changeId(id)}
+        id={id}
       />
-      <label htmlFor={sex}>{value}</label>
+      <label htmlFor={id}>{value}</label>
     </>
   );
 };

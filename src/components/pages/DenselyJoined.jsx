@@ -1,11 +1,19 @@
+// 外部モジュール
 import React, { useState } from "react";
 import styled from "styled-components";
+
+//画面固有import
 import { CheckBox } from "../core/CheckBox";
 import { TextInput } from "../core/TextInput";
 import { Toggle } from "../core/Toggle";
 
 const DenselyJoined = ({ value, text }) => {
   const [isSwitched, setIsSwitched] = useState(true);
+  const [checkId, setCheckId] = useState(0);
+  const data = [
+    { id: 1, sex: "men" },
+    { id: 2, sex: "woman" },
+  ];
 
   return (
     <>
@@ -17,8 +25,16 @@ const DenselyJoined = ({ value, text }) => {
           <StyledContent>
             <TextInput value="名前" />
             <StyledWrapper>
-              <CheckBox type="checkbox" sex="men" value="男" />
-              <CheckBox type="checkbox" sex="women" value="女" />
+              {data.map((item) => {
+                return (
+                  <CheckBox
+                    id={item.id}
+                    value={item.sex === "men" ? "男" : "女"}
+                    changeId={(id) => setCheckId(id)}
+                    isChecked={item.id === checkId}
+                  />
+                );
+              })}
             </StyledWrapper>
             <Toggle value="Toggle Button" />
             <StyledItem>

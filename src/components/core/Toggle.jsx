@@ -10,7 +10,7 @@ export const Toggle = ({ value }) => {
         <StyledButton onClick={() => setIsSwitched(!isSwitched)}>
           {value}
         </StyledButton>
-        {(isSwitched && <span>ON</span>) || <span>OFF</span>}
+        <span>{isSwitched ? "ON" : "OFF"}</span>
       </StyledContainer>
     </>
   );
