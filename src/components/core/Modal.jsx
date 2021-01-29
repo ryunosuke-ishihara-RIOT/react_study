@@ -1,19 +1,17 @@
 import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-const Modal = (props) => {
-  const [state, setState] = useState(props);
-  const { value, text } = state;
-  const [isSwitched, setIsSwitched] = useState(true);
-  const handleSwitch = () => setIsSwitched(!isSwitched);
+export const Modal = ({ value, text }) => {
+  const [isSwitched, setIsSwitched] = useState(false);
+
   return (
     <>
-      <button onClick={handleSwitch}>{value}</button>
+      <button onClick={() => setIsSwitched(!isSwitched)}>{value}</button>
       {isSwitched && (
         <StyledContainer>
           <StyledItem>
             <p>{text}</p>
-            <button onClick={handleSwitch}>close</button>
+            <button onClick={() => setIsSwitched(!isSwitched)}>close</button>
           </StyledItem>
         </StyledContainer>
       )}
@@ -40,5 +38,3 @@ const StyledItem = styled.div`
   align-items: center;
   justify-content: center;
 `;
-
-export default Modal;
