@@ -1,16 +1,14 @@
-import React from "react";
 import { useDropzone } from "react-dropzone";
 import AddPhotoAlternateIcon from "@material-ui/icons/AddPhotoAlternate";
+import React from "react";
 import styled from "styled-components";
 
-export const FileUpload = (props) => {
+export const FileUpload = () => {
   const {
     acceptedFiles,
     getRootProps,
     getInputProps,
-    isDragActive,
     isDragAccept,
-    isDragReject,
     open,
   } = useDropzone({
     accept: "image/jpeg, image/png",
@@ -22,22 +20,22 @@ export const FileUpload = (props) => {
   return (
     <>
       <StyledContainer>
-        <StyledItem {...getRootProps({ className: "dropzone" })}>
-          {isDragAccept && <p>ここにドロップしてね</p>}
-          {isDragReject && <p>それは、jpegでもpngでもないよ</p>}
-          {!isDragActive && (
+        <StyledItem {...getRootProps()}>
+          {isDragAccept ? (
+            <p>ここにドロップしてね</p>
+          ) : (
             <p>
               <StyledIcon>
-                <AddPhotoAlternateIcon style={{ fontSize: 60 }} />
+                <AddPhotoAlternateIcon />
               </StyledIcon>
               ここにファイルをドロップして下さい
               <br />
               <section>
                 または、
-                <a href="!#" onClick={open}>
+                <StyledColor onClick={open}>
                   <input {...getInputProps()} />
                   ファイルを選択
-                </a>
+                </StyledColor>
                 してください
               </section>
             </p>
@@ -55,10 +53,8 @@ const StyledContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  border-width: 2px;
+  border: 2px dashed #eeeeee;
   border-radius: 2px;
-  border-color: #eeeeee;
-  border-style: dashed;
   background-color: #fafafa;
   color: #bdbdbd;
   outline: none;
@@ -74,8 +70,14 @@ const StyledItem = styled.div`
   outline: none;
   position: relative;
 `;
+
 const StyledIcon = styled.div`
   position: absolute;
   top: 0;
   left: 47%;
+`;
+
+const StyledColor = styled.span`
+  color: blue;
+  cursor: pointer;
 `;
