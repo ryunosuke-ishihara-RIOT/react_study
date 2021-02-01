@@ -1,9 +1,9 @@
-import { FileUpload } from "./core/FileUpload";
+import { PresentationalContainer } from "./pages/Presentational_container";
 
 function App() {
   return (
     <>
-      <FileUpload />
+      <PresentationalContainer />
     </>
   );
 }
