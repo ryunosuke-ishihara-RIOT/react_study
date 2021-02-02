@@ -25,10 +25,10 @@ const DenselyJoined = ({ value, text }) => {
           <StyledContent>
             <TextInput value="名前" />
             <StyledWrapper>
-              {data.map((item) => {
+              {data.map((item, idx) => {
                 return (
                   <CheckBox
-                    id={item.id}
+                    key={idx}
                     value={item.sex === "men" ? "男" : "女"}
                     changeId={(id) => setCheckId(id)}
                     isChecked={item.id === checkId}
@@ -76,7 +76,7 @@ const StyledWrapper = styled.div`
 
 const StyledItem = styled.div`
   background-color: white;
-  height: 50px;
+  height: 48px;
   position: relative;
 `;
 
@@ -88,7 +88,7 @@ const StyledText = styled.p`
 
 const StyledButton = styled.button`
   position: absolute;
-  left: 60px;
-  top: 25px;
+  left: 64px;
+  top: 24px;
 `;
 export default DenselyJoined;

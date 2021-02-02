@@ -1,19 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Input = ({ type, placeholder, TextInput }) => {
+export const Input = ({ type, placeholder }) => {
   return (
     <>
-      <StyledInput
-        type={type}
-        placeholder={placeholder}
-        onChange={TextInput.handleChange}
-      />
+      <StyledInput type={type} placeholder={placeholder} />
     </>
   );
 };
 
 const StyledInput = styled.input`
-  width: 250px;
-  height: 25px;
+  width: 240px;
+  height: 24px;
 `;
