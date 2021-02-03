@@ -1,22 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 
-export const SelectBox = ({ selectedValue, optionList, selectBox }) => {
+export const SelectBox = ({
+  isOpen,
+  OPTION_NAME_LIST,
+  selectedValue,
+  handleChange,
+  onItemBtn,
+}) => {
   return (
     <>
-      <StyledSelect onClick={selectBox.handleChange}>
-        {selectedValue.name}
-      </StyledSelect>
-      {selectBox.isOpen && (
+      <StyledSelect onClick={handleChange}>{selectedValue.name}</StyledSelect>
+      {isOpen && (
         <StyledLists>
-          {optionList.map((optionList, idx) => (
+          {OPTION_NAME_LIST.map((OPTION_NAME_LIST, id) => (
             <StyledItem
-              key={idx}
+              key={id}
               onClick={() => {
-                selectBox.handleOnClickChange(optionList.id, optionList.name);
+                onItemBtn(OPTION_NAME_LIST.id, OPTION_NAME_LIST.name);
               }}
             >
-              <span>{optionList.name}</span>
+              <span>{OPTION_NAME_LIST.name}</span>
             </StyledItem>
           ))}
         </StyledLists>
@@ -26,7 +30,7 @@ export const SelectBox = ({ selectedValue, optionList, selectBox }) => {
 };
 
 const StyledSelect = styled.div`
-  border: 0.1mm solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   width: 240px;
   height: 24px;
 `;
@@ -39,8 +43,8 @@ const StyledLists = styled.ul`
 `;
 
 const StyledItem = styled.li`
-  border: 0.1mm solid rgba(0, 0, 0, 0.5);
-  list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  list-style-type: none;
   width: 240px;
   height: 24px;
   padding: 0;
@@ -49,7 +53,6 @@ const StyledItem = styled.li`
   &:hover {
     background-color: gray;
   }
-
   & + li {
     border-top: none;
   }

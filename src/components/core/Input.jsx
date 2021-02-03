@@ -2,11 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export const Input = ({ type, placeholder }) => {
-  return (
-    <>
-      <StyledInput type={type} placeholder={placeholder} />
-    </>
-  );
+  return <StyledInput type={type} placeholder={placeholder} />;
 };
 
 const StyledInput = styled.input`

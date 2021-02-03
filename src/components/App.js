@@ -1,9 +1,9 @@
-import { PresentationalContainer } from "./pages/PresentationalContainer";
+import { PresentationalComponent } from "./pages/PresentationalComponent";
 
 function App() {
   return (
     <>
-      <PresentationalContainer />
+      <PresentationalComponent />
     </>
   );
 }
