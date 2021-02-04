@@ -25,10 +25,10 @@ const DenselyJoined = ({ value, text }) => {
           <StyledContent>
             <TextInput value="名前" />
             <StyledWrapper>
-              {data.map((item, id) => {
+              {data.map((item) => {
                 return (
                   <CheckBox
-                    key={id}
+                    key={item.id}
                     value={item.sex === "men" ? "男" : "女"}
                     changeId={(id) => setCheckId(id)}
                     isChecked={item.id === checkId}
