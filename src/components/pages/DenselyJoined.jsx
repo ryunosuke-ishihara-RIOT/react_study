@@ -11,8 +11,8 @@ const DenselyJoined = ({ value, text }) => {
   const [isSwitched, setIsSwitched] = useState(true);
   const [checkId, setCheckId] = useState(0);
   const data = [
-    { id: 1, sex: "men" },
-    { id: 2, sex: "woman" },
+    { id: "1", sex: "men" },
+    { id: "2", sex: "woman" },
   ];
 
   return (
@@ -28,7 +28,7 @@ const DenselyJoined = ({ value, text }) => {
               {data.map((item) => {
                 return (
                   <CheckBox
-                    id={item.id}
+                    key={item.id}
                     value={item.sex === "men" ? "男" : "女"}
                     changeId={(id) => setCheckId(id)}
                     isChecked={item.id === checkId}
@@ -76,7 +76,7 @@ const StyledWrapper = styled.div`
 
 const StyledItem = styled.div`
   background-color: white;
-  height: 50px;
+  height: 48px;
   position: relative;
 `;
 
@@ -88,7 +88,7 @@ const StyledText = styled.p`
 
 const StyledButton = styled.button`
   position: absolute;
-  left: 60px;
-  top: 25px;
+  left: 64px;
+  top: 24px;
 `;
 export default DenselyJoined;

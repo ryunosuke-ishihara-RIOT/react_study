@@ -1,9 +1,9 @@
-import { FileUpload } from "./core/FileUpload";
+import { PresentationalComponent } from "./pages/PresentationalComponent";
 
 function App() {
   return (
     <>
-      <FileUpload />
+      <PresentationalComponent />
     </>
   );
 }

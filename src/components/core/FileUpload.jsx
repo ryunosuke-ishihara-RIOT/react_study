@@ -1,7 +1,7 @@
-import { useDropzone } from "react-dropzone";
-import AddPhotoAlternateIcon from "@material-ui/icons/AddPhotoAlternate";
 import React from "react";
 import styled from "styled-components";
+import { useDropzone } from "react-dropzone";
+import AddPhotoAlternateIcon from "@material-ui/icons/AddPhotoAlternate";
 
 export const FileUpload = () => {
   const {
@@ -52,7 +52,7 @@ const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 24px;
   border: 2px dashed #eeeeee;
   border-radius: 2px;
   background-color: #fafafa;
