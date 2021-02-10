@@ -8,6 +8,7 @@ export const useInput = () => {
   const [text, setText] = useState({ value: "" });
   const handelChange = (e) => {
     setText({ value: e.target.value });
+    console.log(text);
   };
 
   return { INPUT_TAG_DATA, text, handelChange };

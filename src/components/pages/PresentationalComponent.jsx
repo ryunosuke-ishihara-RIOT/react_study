@@ -9,11 +9,12 @@ import { useSubmitButton } from "../hooks/useSubmitButton";
 import { useInput } from "../hooks/useInput";
 
 export const PresentationalComponent = () => {
+  const { handelChange } = useInput();
   return (
     <StyledAllContainer>
       {useInput().INPUT_TAG_DATA.map(({ id, type, placeholder }) => (
         <div key={id}>
-          <Input type={type} placeholder={placeholder} />
+          <Input type={type} placeholder={placeholder} onClick={handelChange} />
         </div>
       ))}
 
