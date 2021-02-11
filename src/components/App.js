@@ -1,11 +1,15 @@
-import { PresentationalComponent } from "./pages/PresentationalComponent";
+import React from "react";
+import { Provider } from "react-redux";
 
-function App() {
+import { TaxIncludedCalculation } from "./pages/TaxIncludedCalculation";
+import { store } from "../store/index";
+
+export default function App() {
   return (
     <>
-      <PresentationalComponent />
+      <Provider store={store}>
+        <TaxIncludedCalculation />
+      </Provider>
     </>
   );
 }
-
-export default App;
