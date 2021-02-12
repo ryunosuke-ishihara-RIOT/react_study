@@ -1,7 +1,7 @@
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import React from "react";
 
-import { addTax, addNumber } from "../../actions/index";
+import { addTax, addNumber } from "../../actions";
 
 export const TaxIncludedCalculation = () => {
   const { price, numberValue } = useSelector((state) => state, shallowEqual);
