@@ -1,10 +1,10 @@
-import React from "react";
 import { Provider } from "react-redux";
+import React from "react";
 
 import { TaxIncludedCalculation } from "./pages/TaxIncludedCalculation";
-import { store } from "../store/index";
+import { store } from "../store";
 
-export default function App() {
+export const App = () => {
   return (
     <>
       <Provider store={store}>
@@ -12,4 +12,4 @@ export default function App() {
       </Provider>
     </>
   );
-}
+};

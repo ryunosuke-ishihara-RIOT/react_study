@@ -1,10 +1,11 @@
 import { createStore } from "redux";
 
-import { TextReducer } from "../reducers/index";
+import { TextReducer } from "../reducers";
+
 //state初期化
 export const initialState = {
   price: "",
-  value: "",
+  numberValue: "",
 };
 
 //store作成

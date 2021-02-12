@@ -1,5 +1,6 @@
 // ActionCreator
 const ADDTAX = "ADDTAX";
+const NUMBER_VALUE = "NUMBER_VALUE";
 
 export const addTax = (price) => {
   return {
@@ -8,11 +9,9 @@ export const addTax = (price) => {
   };
 };
 
-const TEXT = "TEXT";
-
-export const addText = (value) => {
+export const addNumber = (numberValue) => {
   return {
-    type: TEXT,
-    value,
+    type: NUMBER_VALUE,
+    numberValue,
   };
 };
