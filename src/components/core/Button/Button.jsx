@@ -1,12 +1,10 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-export const Button = ({ value, isDisabled }) => {
-  const handleAlert = () => window.alert("あああ");
-
+export const Button = ({ onClick, value, isDisabled }) => {
   return (
     <>
-      <StyledButton isDisabled={isDisabled} onClick={handleAlert}>
+      <StyledButton isDisabled={isDisabled} onClick={onClick}>
         {value}
       </StyledButton>
     </>
