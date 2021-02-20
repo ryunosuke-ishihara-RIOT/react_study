@@ -1,9 +1,10 @@
 import React from "react";
 
-export const Resources = ({ resources }) => {
+export const Resources = (props) => {
+  const { propsResources } = props;
   return (
     <>
-      {resources.map((resource) => (
+      {propsResources.map((resource) => (
         <p key={resource.id}>{resource.title}</p>
       ))}
     </>
