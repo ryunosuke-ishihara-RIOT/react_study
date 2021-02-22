@@ -1,14 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-export const Button = ({ value, isDisabled, onClick }) => {
-  return (
-    <>
-      <StyledButton isDisabled={isDisabled} onClick={onClick}>
-        {value}
-      </StyledButton>
-    </>
-  );
+export const Button = ({ value, ...props }) => {
+  return <StyledButton {...props}>{value}</StyledButton>;
 };
 
 const StyledButton = styled.button`
