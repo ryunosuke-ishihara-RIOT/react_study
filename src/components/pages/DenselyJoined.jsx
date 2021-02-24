@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 //画面固有import
-import { CheckBox } from "../core/CheckBox";
-import { TextInput } from "../core/TextInput";
-import { Toggle } from "../core/Toggle";
+import { CheckBox } from "../core/CheckBox/CheckBox";
+import { TextInput } from "../core/TextInput/TextInput";
+import { Toggle } from "../core/Toggle/Toggle";
 
 const DenselyJoined = ({ value, text }) => {
   const [isSwitched, setIsSwitched] = useState(true);

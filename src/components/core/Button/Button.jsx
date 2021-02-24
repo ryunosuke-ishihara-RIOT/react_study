@@ -1,16 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-export const Button = ({ value, isDisabled }) => {
-  const handleAlert = () => window.alert("あああ");
-
-  return (
-    <>
-      <StyledButton isDisabled={isDisabled} onClick={handleAlert}>
-        {value}
-      </StyledButton>
-    </>
-  );
+export const Button = ({ value, ...props }) => {
+  return <StyledButton {...props}>{value}</StyledButton>;
 };
 
 const StyledButton = styled.button`
