@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-export const Modal = ({ value, text }) => {
+export type Props = { value: string; text: string };
+
+export const Modal: React.FC<Props> = ({ value, text }) => {
   const [isSwitched, setIsSwitched] = useState(false);
 
   return (

@@ -3,7 +3,7 @@ import React from "react";
 
 import { addTax, addNumber } from "../../actions";
 
-export const TaxIncludedCalculation = () => {
+export const TaxIncludedCalculation: React.FC = () => {
   const { price, numberValue } = useSelector((state) => state, shallowEqual);
   const dispatch = useDispatch();
 
@@ -12,7 +12,9 @@ export const TaxIncludedCalculation = () => {
       <input
         type="number"
         value={numberValue}
-        onChange={(e) => dispatch(addNumber(e.target.value))}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          dispatch(addNumber(e.target.value))
+        }
       />
       <button onClick={() => dispatch(addTax(numberValue))}>計算</button>
       <span> 税込金額: {price} </span>

@@ -7,9 +7,14 @@ import { CheckBox } from "../core/CheckBox/CheckBox";
 import { TextInput } from "../core/TextInput/TextInput";
 import { Toggle } from "../core/Toggle/Toggle";
 
-const DenselyJoined = ({ value, text }) => {
-  const [isSwitched, setIsSwitched] = useState(true);
-  const [checkId, setCheckId] = useState(0);
+type Props = {
+  value: string;
+  text: string;
+};
+
+export const DenselyJoined: React.FC<Props> = ({ value, text }) => {
+  const [isSwitched, setIsSwitched] = useState<boolean>(true);
+  const [checkId, setCheckId] = useState<string>("");
   const data = [
     { id: "1", sex: "men" },
     { id: "2", sex: "woman" },
@@ -30,7 +35,7 @@ const DenselyJoined = ({ value, text }) => {
                   <CheckBox
                     key={item.id}
                     value={item.sex === "men" ? "男" : "女"}
-                    changeId={(id) => setCheckId(id)}
+                    changeId={() => setCheckId(item.id)}
                     isChecked={item.id === checkId}
                   />
                 );
@@ -91,4 +96,3 @@ const StyledButton = styled.button`
   left: 64px;
   top: 24px;
 `;
-export default DenselyJoined;

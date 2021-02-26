@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-export const TextInput = ({ value }) => {
-  const [name, setName] = useState({ value: "" });
+export type Props = {
+  value: string;
+};
+
+export const TextInput: React.FC<Props> = ({ value }) => {
+  const [name, setName] = useState<{ value: string }>({ value: "" });
 
   return (
     <>
@@ -10,7 +14,9 @@ export const TextInput = ({ value }) => {
         <span>{value}：</span>
         <input
           value={name.value}
-          onChange={(e) => setName({ value: e.target.value })}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setName({ value: e.target.value })
+          }
         />
       </StyledContainer>
       <StyledText>私の名前は{name.value}です</StyledText>

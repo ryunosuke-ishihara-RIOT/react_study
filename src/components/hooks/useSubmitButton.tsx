@@ -1,4 +1,6 @@
-export const useSubmitButton = () => {
+export const useSubmitButton: () => {
+  handleLog: () => void;
+} = () => {
   const handleLog = () => {
     console.log("送信");
   };

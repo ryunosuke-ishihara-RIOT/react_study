@@ -1,4 +1,11 @@
-export const TextReducer = (state = {}, action) => {
+export const TextReducer: (
+  state: {} | undefined,
+  action: {
+    type: string;
+    price: number;
+    numberValue: string;
+  }
+) => {} = (state = {}, action) => {
   switch (action.type) {
     case "NUMBER":
       return { ...state, numberValue: action.numberValue };

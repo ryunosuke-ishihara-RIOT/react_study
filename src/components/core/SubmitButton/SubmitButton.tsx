@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-export const SubmitButton = ({ handleLog }) => {
+export type Props = { handleLog: () => void };
+
+export const SubmitButton: React.FC<Props> = ({ handleLog }) => {
   return <StyledButton onClick={handleLog}>ボタン</StyledButton>;
 };
 

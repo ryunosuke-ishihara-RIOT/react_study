@@ -1,7 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-export const SelectBox = ({
+export type Props = {
+  isOpen: boolean;
+  OPTION_NAME_LIST: {
+    id: string;
+    name: string;
+  }[];
+  selectedValue: {
+    id: string;
+    name: string;
+  };
+  handleChange: () => void;
+  onItemBtn: (key: string, value: string) => void;
+};
+
+export const SelectBox: React.FC<Props> = ({
   isOpen,
   OPTION_NAME_LIST,
   selectedValue,

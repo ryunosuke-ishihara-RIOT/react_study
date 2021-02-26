@@ -5,9 +5,9 @@ import { Resources } from "../core/Resources/Resources";
 import jsonplaceholder from "../../apis/jsonplaceholder";
 
 export const ConnectingToApi = () => {
-  const [resources, setResources] = useState([]);
+  const [resources, setResources] = useState({});
   const [isOpen, setIsOpen] = useState(false);
-  const handleChange = () => {
+  const handleChange: () => void = () => {
     setIsOpen((isOpen) => !isOpen);
   };
 

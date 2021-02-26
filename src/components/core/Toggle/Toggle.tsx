@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-export const Toggle = ({ value }) => {
-  const [isSwitched, setIsSwitched] = useState(true);
+export type Props = {
+  value: string;
+};
+
+export const Toggle: React.FC<Props> = ({ value }) => {
+  const [isSwitched, setIsSwitched] = useState<boolean>(true);
 
   return (
     <>
