@@ -5,7 +5,7 @@ import { Resources } from "../core/Resources/Resources";
 import jsonplaceholder from "../../apis/jsonplaceholder";
 
 export const ConnectingToApi = () => {
-  const [resources, setResources] = useState({});
+  const [resources, setResources] = useState<never[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const handleChange: () => void = () => {
     setIsOpen((isOpen) => !isOpen);
@@ -14,8 +14,8 @@ export const ConnectingToApi = () => {
   useEffect(() => {
     (async () => {
       try {
-        const result = await jsonplaceholder.get("/posts");
-        setResources(result.data);
+        const { data } = await jsonplaceholder.get<never[]>("/posts");
+        setResources(data);
       } catch (err) {
         console.log(err);
       }

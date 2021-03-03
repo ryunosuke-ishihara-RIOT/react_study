@@ -3,8 +3,8 @@ import React from "react";
 // import { ConnectingToApi } from "./pages/ConnectingToApi";
 // import { DenselyJoined } from "./pages/DenselyJoined";
 // import { PresentationalComponent } from "./pages/PresentationalComponent";
-//TODO import { TaxIncludedCalculation } from "./pages/TaxIncludedCalculation";
-//TODO import { ConnectingToApi } from "./pages/ConnectingToApi";
+// import { TaxIncludedCalculation } from "./pages/TaxIncludedCalculation";
+// import { ConnectingToApi } from "./pages/ConnectingToApi";
 // import { FileUpload } from "./core/FileUpload/FileUpload";
 import { Modal } from "./core/Modal/Modal";
 

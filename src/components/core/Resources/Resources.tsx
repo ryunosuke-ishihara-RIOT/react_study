@@ -1,12 +1,10 @@
 import React from "react";
 
 type Props = {
-  props: {};
-  propsResources: [];
+  propsResources: never[];
 };
 
-export const Resources: React.FC<Props> = (props) => {
-  const { propsResources } = props;
+export const Resources: React.FC<Props> = ({ propsResources }) => {
   return (
     <>
       {propsResources.map((resource: { id: string; title: string }) => (
