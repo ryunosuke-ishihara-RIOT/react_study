@@ -10,5 +10,5 @@ export default {
 export const SampleButton: Story<Props> = (args) => <Button {...args} />;
 
 SampleButton.args = {
-  value: "button",
+  children: "ボタン",
 };

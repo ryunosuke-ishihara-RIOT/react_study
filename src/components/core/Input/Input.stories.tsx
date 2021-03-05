@@ -10,6 +10,5 @@ export default {
 export const Sample: Story<Props> = (args) => <Input {...args} />;
 
 Sample.args = {
-  value: "check",
   placeholder: "文字を入力してください",
 };

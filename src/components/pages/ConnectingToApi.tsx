@@ -25,7 +25,7 @@ export const ConnectingToApi = () => {
   return (
     <>
       <section>
-        <Button onClick={handleChange} value={isOpen ? "閉じる" : "表示"} />
+        <Button onClick={handleChange}>{isOpen ? "閉じる" : "表示"}</Button>
         {isOpen && <Resources propsResources={resources} />}
       </section>
     </>
