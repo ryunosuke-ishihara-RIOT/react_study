@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Input } from "../core/Input";
-import { SelectBox } from "../core/SelectBox";
-import { SubmitButton } from "../core/SubmitButton";
+import { Input } from "../core/Input/Input";
+import { SelectBox } from "../core/SelectBox/SelectBox";
+import { SubmitButton } from "../core/SubmitButton/SubmitButton";
 import { useSelectBox } from "../hooks/useSelectBox";
 import { useSubmitButton } from "../hooks/useSubmitButton";
 import { useInput } from "../hooks/useInput";

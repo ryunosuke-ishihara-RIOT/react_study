@@ -4,8 +4,8 @@ import { TextReducer } from "../reducers";
 
 //state初期化
 export const initialState = {
-  price: {},
-  numberValue: {},
+  price: { price: 0 },
+  numberValue: { numberValue: "" },
 };
 
 //store作成

@@ -1,11 +1,12 @@
 import React from "react";
 
-import { ConnectingToApi } from "./pages/ConnectingToApi";
+// import { DenselyJoined } from "./pages/DenselyJoined.tsx";
+import { FileUpload } from "./core/FileUpload/FileUpload.jsx";
 
 export const App = () => {
   return (
     <>
-      <ConnectingToApi />
+      <FileUpload />
     </>
   );
 };
